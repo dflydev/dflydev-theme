@@ -1,0 +1,6 @@
+{
+	"name": "myvendor/blue",
+	"_test": {
+		"message": "Hello World"
+	}
+}
