@@ -19,13 +19,15 @@
         "php": ">=5.3.3"
     },
     "require-dev": {
+        "dflydev/placeholder-resolver": "1.*",
         "dflydev/psr0-resource-locator": "1.*@dev",
-        "dflydev/placeholder-resolver": "1.*"
+        "symfony/routing": "~2.1"
     },
     "suggest": {
         "dflydev/placeholder-resolver": "1.*",
         "dflydev/psr0-resource-locator": "1.*",
-        "dflydev/psr0-resource-locator-composer": "1.*"
+        "dflydev/psr0-resource-locator-composer": "1.*",
+        "symfony/routing": "~2.1"
     },
     "autoload": {
         "psr-0": {
