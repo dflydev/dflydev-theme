@@ -22,13 +22,13 @@ interface PathLocatorInterface
      * Locate a theme path
      *
      * Implementations should return null in the case that either the
-     * description is not supported or if the theme cannot be found
+     * descriptor is not supported or if the theme cannot be found
      * where the loader expects.
      *
-     * @param string $description Theme description
-     * @param string $type        Type of theme
+     * @param string $descriptor Theme descriptor
+     * @param string $type       Type of theme
      *
      * @return string
      */
-    public function locateThemePath($description, $type = null);
+    public function locateThemePath($descriptor, $type = null);
 }

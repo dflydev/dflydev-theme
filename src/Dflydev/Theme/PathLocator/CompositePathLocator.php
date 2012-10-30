@@ -50,10 +50,10 @@ class CompositePathLocator implements PathLocatorInterface
     /**
      * {@inheritdoc}
      */
-    public function locateThemePath($description, $type = null)
+    public function locateThemePath($descriptor, $type = null)
     {
         foreach ($this->pathLocators as $pathLocator) {
-            if (null !== $path = $pathLocator->locateThemePath($description, $type)) {
+            if (null !== $path = $pathLocator->locateThemePath($descriptor, $type)) {
                 return $path;
             }
         }

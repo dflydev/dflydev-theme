@@ -38,9 +38,9 @@ class PathMapperPathLocator implements PathLocatorInterface
     /**
      * {@inheritdoc}
      */
-    public function locateThemePath($description, $type = null)
+    public function locateThemePath($descriptor, $type = null)
     {
-        if (preg_match('/^name:(.+)$/', $description, $matches)) {
+        if (preg_match('/^name:(.+)$/', $descriptor, $matches)) {
             $name = $matches[1];
 
             return $this->pathMapper->generateFilesystemPath($name, $type);

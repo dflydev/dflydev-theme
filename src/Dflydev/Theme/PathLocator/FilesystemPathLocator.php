@@ -11,8 +11,6 @@
 
 namespace Dflydev\Theme\PathLocator;
 
-use Dflydev\Theme\PathMapper\PathMapperInterface;
-
 /**
  * Filesystem Path Locator Implementation
  *
@@ -23,9 +21,9 @@ class FilesystemPathLocator implements PathLocatorInterface
     /**
      * {@inheritdoc}
      */
-    public function locateThemePath($description, $type = null)
+    public function locateThemePath($descriptor, $type = null)
     {
-        if (preg_match('/^filesystem:(.+)$/', $description, $matches)) {
+        if (preg_match('/^filesystem:(.+)$/', $descriptor, $matches)) {
             return $matches[1];
         }
 

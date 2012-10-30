@@ -38,9 +38,9 @@ class Psr0ResourceLocatorPathLocator implements PathLocatorInterface
     /**
      * {@inheritdoc}
      */
-    public function locateThemePath($description, $type = null)
+    public function locateThemePath($descriptor, $type = null)
     {
-        if (!preg_match('/^namespace:(.+)$/', $description, $matches)) {
+        if (!preg_match('/^namespace:(.+)$/', $descriptor, $matches)) {
             return null;
         }
 

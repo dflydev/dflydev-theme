@@ -38,14 +38,14 @@ class ThemeManager
     /**
      * Register Theme
      *
-     * @param string $description Description
-     * @param string $type        Type
+     * @param string $descriptor Descriptor
+     * @param string $type       Type
      *
      * @return ThemeInterface
      */
-    public function registerTheme($description, $type = null)
+    public function registerTheme($descriptor, $type = null)
     {
-        $path = $this->pathLocator->locateThemePath($description, $type);
+        $path = $this->pathLocator->locateThemePath($descriptor, $type);
         $theme = $this->themeFactory->createTheme($path, $type);
 
         $this->registry->registerTheme($theme);
