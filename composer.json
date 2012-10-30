@@ -1,6 +1,6 @@
 {
     "name": "dflydev/theme",
-    "description": "Generic Theme Framework",
+    "description": "A Theme Framework",
     "keywords": ["theme"],
     "license": "MIT",
     "authors": [
@@ -23,8 +23,9 @@
         "dflydev/placeholder-resolver": "1.*"
     },
     "suggest": {
-        "dflydev/psr0-resource-locator-composer": "1.*",
-        "dflydev/placeholder-resolver": "1.*"
+        "dflydev/placeholder-resolver": "1.*",
+        "dflydev/psr0-resource-locator": "1.*",
+        "dflydev/psr0-resource-locator-composer": "1.*"
     },
     "autoload": {
         "psr-0": {
