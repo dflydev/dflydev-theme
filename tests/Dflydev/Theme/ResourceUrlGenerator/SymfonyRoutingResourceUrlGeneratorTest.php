@@ -196,7 +196,7 @@ class SymfonyRoutingResourceUrlGeneratorTest extends \PHPUnit_Framework_TestCase
         $pathMapper
             ->expects($this->once())
             ->method('generatePublicResourceFilesystemPathForTheme')
-            ->with($theme, 'css/main.css')
+            ->with($theme, '/css/main.css')
             ->will($this->returnValue(__DIR__.'/missing-fixtures/typed-theme/blue/css/main.css'));
 
         $urlGenerator

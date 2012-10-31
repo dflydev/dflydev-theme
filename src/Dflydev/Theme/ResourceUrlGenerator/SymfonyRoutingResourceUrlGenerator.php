@@ -109,8 +109,6 @@ class SymfonyRoutingResourceUrlGenerator implements ResourceUrlGeneratorInterfac
      */
     public function generateResourceUrl($resource)
     {
-        $resource = ltrim($resource, '/');
-
         $theme = $this->themeProvider->provideTheme();
 
         $filesystemPath = $this->pathMapper->generatePublicResourceFilesystemPathForTheme($theme, $resource);
@@ -121,6 +119,8 @@ class SymfonyRoutingResourceUrlGenerator implements ResourceUrlGeneratorInterfac
                 $resource
             );
         }
+
+        $resource = ltrim($resource, '/');
 
         if ($type = $theme->type()) {
             return $this->urlGenerator->generate($this->typedRouteName, array(

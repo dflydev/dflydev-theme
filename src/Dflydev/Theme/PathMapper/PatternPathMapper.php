@@ -116,7 +116,12 @@ class PatternPathMapper implements PathMapperInterface
      */
     public function generatePublicResourceFilesystemPathForTheme(ThemeInterface $theme, $resource)
     {
-        return $this->generateFilesystemPath($theme->name(), $theme->type()).$theme->massageResource($this->docroot, $resource);
+        $massagedResource = $theme->massageResource($this->docroot, $resource);
+        if (0 !== strpos($massagedResource, '/')) {
+            $massagedResource = '/'.$massagedResource;
+        }
+
+        return $this->generateFilesystemPath($theme->name(), $theme->type()).$massagedResource;
     }
 
     private function placeholderResolver($name, $type = null)
