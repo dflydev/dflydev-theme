@@ -83,6 +83,9 @@ class Version0ThemeFormat extends AbstractThemeFormat
     public function massageResource($docroot, $resource)
     {
         if (0 === strpos($this->rootPath, $docroot)) {
+            if (0 !== strpos($resource, '/')) {
+                $resource = '/'.$resource;
+            }
             return '/public'.$resource;
         }
 
